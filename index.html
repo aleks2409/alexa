@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="portfolio, web design, html, css, javascript">
+        
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link rel="stylesheet" type="text/css" href="set2.css" />
+	    <link rel="stylesheet" type="text/css" href="normalize.css" />
+	    <link rel="stylesheet" type="text/css" href="demo.css" />
+        
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        
+        
+
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Aleksandra</title>
+     <style>
+        
+
+.btn-container {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 6.4rem;
+  line-height: 6.4rem;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  margin: 1.6rem;
+  font-size: 0.8rem;
+  border: none;
+  padding: 0;
+  position: relative;
+  outline: none;
+}
+
+.btn--shockwave.is-active {
+  -webkit-animation: shockwaveJump 1s ease-out infinite;
+          animation: shockwaveJump 1s ease-out infinite;
+}
+.btn--shockwave.is-active:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  -webkit-animation: shockwave 1s .65s ease-out infinite;
+          animation: shockwave 1s .65s ease-out infinite;
+}
+.btn--shockwave.is-active:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  -webkit-animation: shockwave 1s .5s ease-out infinite;
+          animation: shockwave 1s .5s ease-out infinite;
+}
+
+@-webkit-keyframes shockwaveJump {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  50% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  55% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  60% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes shockwaveJump {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  50% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  55% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  60% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes shockwave {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.15);
+  }
+  95% {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0), inset 0 0 30px rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: scale(2.25);
+            transform: scale(2.25);
+  }
+}
+@keyframes shockwave {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.15);
+  }
+  95% {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0), inset 0 0 30px rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: scale(2.25);
+            transform: scale(2.25);
+  }
+}
+.btn--jump.is-active {
+  -webkit-animation: .4s jump ease infinite alternate;
+          animation: .4s jump ease infinite alternate;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+.btn--pulse.is-active {
+  background: transparent;
+}
+.btn--pulse.is-active:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation: pulse 0.4s ease infinite alternate;
+          animation: pulse 0.4s ease infinite alternate;
+  z-index: -1;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 45%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 45%;
+  }
+}
+.btn--blink.is-active {
+  background: transparent;
+}
+.btn--blink.is-active:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation: blink 1.33s ease-out infinite;
+          animation: blink 1.33s ease-out infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.btn--wiggle.is-active {
+  -webkit-animation: 1s wiggle ease infinite;
+          animation: 1s wiggle ease infinite;
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  20% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  40% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  90% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  20% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  40% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  90% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+.btn--wut.is-active {
+  -webkit-animation: 1s fullRotation ease infinite;
+          animation: 1s fullRotation ease infinite;
+}
+.btn--wut.is-active:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation: wutBefore 0.8s .4s ease-out infinite;
+          animation: wutBefore 0.8s .4s ease-out infinite;
+  z-index: -1;
+}
+.btn--wut.is-active:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation: wut 0.8s ease-out infinite;
+          animation: wut 0.8s ease-out infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes fullRotation {
+  0% {
+    -webkit-transform: rotate(-3deg) scale(1) translate3d(0, 0, 0);
+            transform: rotate(-3deg) scale(1) translate3d(0, 0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(50deg) translate3d(0, 5px, 0);
+            transform: rotate(50deg) translate3d(0, 5px, 0);
+  }
+  40% {
+    -webkit-transform: rotate(-15deg) scale(1.1) translate3d(0, 8px, -5px);
+            transform: rotate(-15deg) scale(1.1) translate3d(0, 8px, -5px);
+  }
+  60% {
+    -webkit-transform: rotate(5deg) translate3d(5px, -8px, -80px);
+            transform: rotate(5deg) translate3d(5px, -8px, -80px);
+  }
+  90% {
+    -webkit-transform: rotate(-1deg) translate3d(0, 0, 0);
+            transform: rotate(-1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes fullRotation {
+  0% {
+    -webkit-transform: rotate(-3deg) scale(1) translate3d(0, 0, 0);
+            transform: rotate(-3deg) scale(1) translate3d(0, 0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(50deg) translate3d(0, 5px, 0);
+            transform: rotate(50deg) translate3d(0, 5px, 0);
+  }
+  40% {
+    -webkit-transform: rotate(-15deg) scale(1.1) translate3d(0, 8px, -5px);
+            transform: rotate(-15deg) scale(1.1) translate3d(0, 8px, -5px);
+  }
+  60% {
+    -webkit-transform: rotate(5deg) translate3d(5px, -8px, -80px);
+            transform: rotate(5deg) translate3d(5px, -8px, -80px);
+  }
+  90% {
+    -webkit-transform: rotate(-1deg) translate3d(0, 0, 0);
+            transform: rotate(-1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@-webkit-keyframes wut {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: skew(0) translate3d(0, 0px, 0px);
+            transform: skew(0) translate3d(0, 0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  50% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    -webkit-transform: translate3d(20, 10px, 20px);
+            transform: translate3d(20, 10px, 20px);
+  }
+  100% {
+    border-radius: 50%;
+    -webkit-transform: skew(0) translate3d(0, 0px, 0px);
+            transform: skew(0) translate3d(0, 0px, 0px);
+  }
+}
+@keyframes wut {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: skew(0) translate3d(0, 0px, 0px);
+            transform: skew(0) translate3d(0, 0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+  50% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    -webkit-transform: translate3d(20, 10px, 20px);
+            transform: translate3d(20, 10px, 20px);
+  }
+  100% {
+    border-radius: 50%;
+    -webkit-transform: skew(0) translate3d(0, 0px, 0px);
+            transform: skew(0) translate3d(0, 0px, 0px);
+  }
+}
+@-webkit-keyframes wutBefore {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: translate3d(0, 0px, 0px);
+            transform: translate3d(0, 0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate3d(-10px, 10px, 0);
+            transform: translate3d(-10px, 10px, 0);
+  }
+  70% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    -webkit-transform: translate3d(-20px, -10px, -20px);
+            transform: translate3d(-20px, -10px, -20px);
+  }
+  100% {
+    border-radius: 50%;
+    -webkit-transform: translate3d(0, 0px, 0px);
+            transform: translate3d(0, 0px, 0px);
+  }
+}
+@keyframes wutBefore {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: translate3d(0, 0px, 0px);
+            transform: translate3d(0, 0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate3d(-10px, 10px, 0);
+            transform: translate3d(-10px, 10px, 0);
+  }
+  70% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    -webkit-transform: translate3d(-20px, -10px, -20px);
+            transform: translate3d(-20px, -10px, -20px);
+  }
+  100% {
+    border-radius: 50%;
+    -webkit-transform: translate3d(0, 0px, 0px);
+            transform: translate3d(0, 0px, 0px);
+  }
+}
+	     
+	     
+	    </style>
+	     <script>
+        document.addEventListener('click', click);
+
+function click(e) {
+  let el;
+
+  el = e.target;
+
+  if (el !== e.currentTarget) {
+    if (el.nodeName === 'BUTTON') {
+
+      if (el.classList.contains('is-active')) {
+        el.classList.remove('is-active');
+      } else {
+        el.classList.add('is-active');
+      }
+    }
+  }
+  event.stopPropagation();
+}
+        </script>
+        
+    </head>
+    <body>
+        
+        <header>
+            <nav>
+                <div class="row">
+                    <img src="resources/img/a.png" alt="logo" class="logo">
+                    <img src="resources/img/a.png" alt="logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <li><a href="gallery.html">design</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1 class="animated bounceInDown" style="animation-duration: 2.5s;">Hello,</h1>
+             <h1 class="animated bounceInLeft" style="animation-duration: 2.5s;">I am Aleksandra</h1>
+          
+             <h1 class="animated bounceInRight" style="animation-duration: 2.5s;">Front End developer</h1>
+            </div>
+            
+        </header>
+            
+           <section class="section-cities" id="portfolio">
+            <div class="row">
+                <h2>some of my latest work</h2>
+            </div>
+            <div class="row js--wp-3">
+		    <div class="grid">
+					<figure class="effect-lexi">
+						<img src="img/nikolic.png" alt="img12"/>
+						<figcaption>
+							<h2>TRAVEL <span>WEBSITE</span></h2>
+							<p>View more</p>
+							<a href="http://nikolicprevoz.rs/">View more</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-lexi">
+						<img src="img/grooming.png" alt="img03"/>
+						<figcaption>
+							<h2>GROOMING <span>WEBSITE</span></h2>
+							<p>View more</p>
+							<a href="http://www.grooming019.rs/">View more</a>
+						</figcaption>			
+					</figure>
+			   
+				</div>
+                
+            </div>
+            
+        </section>
+        
+        
+        
+        <section class="section-testimonials" id="about">
+            <div class="row">
+                <h2>about</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <blockquote>
+                        My name is Aleksandra. I am a front end developer based in Negotin, Serbia. <br>
+                        By day I am disguised as a branch manager in a travel agency, but actually I am a freelance superhero fighting the evil code and helping my projects grow. <br>
+                    </blockquote>
+                    
+                </div>
+                <cite><img src="resources/img/portfolio.jpg" alt="photo"></cite>
+            </div>
+        </section>
+        
+        
+        <section class="section-plans js--section-plans" id="skills">
+            <div id="w">
+    <div id="content">
+      <h2>skills</h2>
+
+      
+	    <center>
+	        <div class='btn-container'>
+  <button class='btn btn--shockwave is-active'>
+    HTML/CSS
+  </button>
+  <button class='btn btn--jump is-active'>
+    JavaScript
+  </button>
+  <button class='btn btn--wiggle is-active'>
+    Wordpress
+  </button>
+  <button class='btn btn--jump is-active'>
+    Silverstripe
+  </button>
+  <button class='btn btn--wiggle is-active'>
+    PHP
+  </button>
+  <button class='btn btn--wut is-active'>
+    MySQL
+  </button>
+			
+			 <!--
+<div id="SkillBox">
+       
+      
+  <div class="SkillBar">
+    <div id="Skill-HTML"> 
+      <span class="Skill-Area ">HTML</span>
+      <span class="PercentText ">100%</span>
+    </div>
+  </div>
+  
+  <div class="SkillBar">
+    <div id="Skill-CSS">
+      <span class="Skill-Area ">CSS/CSS3</span>
+      <span class="PercentText ">90%</span>
+    </div>
+  </div>
+
+  <div class="SkillBar">
+    <div id="Skill-jQuery">
+      <span class="Skill-Area ">jQuery</span>
+      <span class="PercentText ">50%</span>
+    </div>
+  </div>
+  
+  <div class="SkillBar">
+    <div id="Skill-JS">
+      <span class="Skill-Area ">JavaScript</span>
+      <span class="PercentText ">80%</span>
+    </div>
+  </div>
+  
+  
+  
+    <div class="SkillBar">
+    <div id="Skill-C">
+      <span class="Skill-Area ">WordPress</span>
+      <span class="PercentText ">70%</span>
+    </div>
+  </div>
+  
+    <div class="SkillBar">
+    <div id="Skill-JAVA">
+      <span class="Skill-Area ">Photoshop </span>
+      <span class="PercentText ">65%</span>
+    </div>
+  </div>
+  
+    <div class="SkillBar">
+    <div id="Skill-PHP">
+      <span class="Skill-Area ">PHP </span>
+      <span class="PercentText ">40%</span>
+    </div>
+  </div>
+  
+    <div class="SkillBar">
+    <div id="Skill-SQL">
+      <span class="Skill-Area ">SQL </span>
+      <span class="PercentText ">60%</span>
+    </div>
+  </div>
+  
+    
+  
+</div> -->
+</center>
+  
+                </div>
+            </div>
+                     
+        </section>
+        
+        
+       <section class="section-form" id="contact">
+            <div class="row">
+                <h2>contact me</h2>
+            </div>
+           
+           <div class="row forma" style="width: 40%;">
+           <form action="https://formspree.io/saska.am24@gmail.com" method="POST">
+               <p style="padding-bottom: 10px;">
+<label for='name'>Name:</label><br>
+                   <input type="text" name="name"></p>
+               <p style="padding-bottom: 10px;">
+<label for='email'>Email:</label> <br>
+                   <input type="email" name="_replyto"></p>
+               
+               <p style="padding-bottom: 10px;">
+<label for='message'>Your message:</label> <br>
+<textarea name="message" placeholder="Your message"></textarea>
+</p>
+  <input type="submit" value="Send it!">
+</form>
+           </div>
+           <!-- <div class="row" style="width: 30%;">
+        
+        <form method="POST" name="contactform" action="contact-form-handler.php"> 
+<p style="padding-bottom: 10px;">
+<label for='name'>Name:</label> <br>
+<input type="text" name="name" placeholder="Your name" required>
+</p>
+<p style="padding-bottom: 10px;">
+<label for='email'>Email:</label> <br>
+<input type="text" name="email" placeholder="Your email" required> <br>
+</p>
+<p style="padding-bottom: 10px;">
+<label for='message'>Your message:</label> <br>
+<textarea name="message" placeholder="Your message"></textarea>
+</p>
+<input type="submit" value="Send it!"><br>
+</form>
+                
+            </div>-->
+        </section>
+        
+       
+        
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#about">About me</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/profile.php?id=1657576810"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/aleksandra-mitrovic-4a1728b9/"><i class="ion-social-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/aleeks_24/?fbclid=IwAR2ZSpASM3232NkXD34H-tWJCzDZOs-sqlckYrEv0aq9yJRIz4Lar-rVZCo"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                     &copy; 2021 Aleksandra Mitrovic
+                </p>
+            </div>
+        </footer>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61026110-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+    </body>  
+    
+</html>
